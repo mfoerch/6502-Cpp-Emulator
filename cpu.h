@@ -165,14 +165,15 @@ private:
 
     bool boundaryCrossed;
 
-    uint8_t cycles;
+    unsigned int cycles;
+
 
 public:
     Cpu();
     void attachMemory(Memory* mem);
     void reset(uint16_t PC_position);
     bool executeOpcode();
-
+    unsigned int getLastCycles();
 
     #define CPU_INTERRUPT_NMI   1
     #define CPU_INTERRUPT_IRQ   2

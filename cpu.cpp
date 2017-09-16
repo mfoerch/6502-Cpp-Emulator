@@ -331,6 +331,11 @@ uint8_t Cpu::fetchOpcode()
     return memory->read(pc);
 }
 
+unsigned int Cpu::getLastCycles()
+{
+    return cycles;
+}
+
 bool Cpu::executeOpcode()
 {
     /* Prepare for opcode execution */
